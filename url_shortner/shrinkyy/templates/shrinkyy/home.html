@@ -1,0 +1,17 @@
+
+{% extends 'shrinkyy/index.html' %}
+
+{% block content %}
+<h1 class=" text-center cover-heading">{{ title }}</h1>
+	<p class="lead">&#8595; Shorten Your Links Here &#8595;</p>
+<p class="lead">
+	<div class="text-center col-sm-offset-3">
+		<form method="POST", action="." autocomplete="off">
+			{% csrf_token %}
+			<!-- <input name="url" type="text" placeholder="Shorten URL"> -->
+			{{ form.as_p }}
+			<input class="btn btn-primary" type="submit" value="Shrink">
+		</form>
+	</div>	
+</p>
+{% endblock content %}

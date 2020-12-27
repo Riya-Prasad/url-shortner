@@ -1,0 +1,14 @@
+{% extends 'shrinkyy/index.html' %}
+
+{% block content %}
+<div class="body">
+	<h1>Already Exists!</h1>
+	<p>{{ object.url }}</p>
+
+	{% if object.clickevent %}<p>Count: {{ object.clickevent.count }}</p>{% endif %}
+	<p><a class="btn btn-secondary btn-link" href="{{ object.get_short_url }}">{{ object.get_short_url }}</a></p>
+	<a class="btn btn-outline-info" href="/">Shrink New</a>
+
+</div>
+
+{% endblock content %} 
